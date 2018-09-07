@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <style>
+            body{ background:#303B52; }
+            canvas{ background: white; /*width: 500px; height: 500px;*/ /*不能在这里加，因为会默认帮你比例,因此在JS里赋予*/ }
+        </style>
+    </head>
+    <body>
+    <canvas id="bd">
+        <span>sf</span>
+    </canvas>
+    </body>
+    <script>
+        var sg=document.querySelector('#bd');
+    sg.width=400;
+    sg.height=400;
+        var ge=sg.getContext('2d'); //绘制矩形
+         ge.fillStyle='red'; //填充颜色
+        ge.fillRect(50,50,100,100); //x y轴坐标 宽度 高度 默认黑色
+        ge.strokeStyle='blue';//边框的颜色
+        ge.lineWidth='5'; //边框的大小
+        ge.strokeRect(50.5,50.5,100,100); //边框 //绘制路径
+        ge.beginPath();//开始执行
+        ge.moveTo(100,100); //开始的位置
+        ge.lineTo(200,200);//第二个位置
+        ge.lineTo(150,300);//第三个位置
+        ge.closePath();//起点到终点的连接闭合
+        ge.stroke();//绘制一条线
+        ge.lineWidth='5'; //边框的大小
+        ge.strokeStyle='brown';//边框的颜色
+        ge.lineCap='round'; //线的断点样式,round为圆角,spuare 出来的长度为宽度一半10px。 //绘制圆形
+    </script>
