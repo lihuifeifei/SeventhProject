@@ -2,9 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>History事件</title>
 </head>
 <body>
-$END$
+    <h1>test01</h1>
+    <a href="0830.html">去0830页面</a>
+
+    <button id="btn01">点击我</button>
 </body>
+<script type="text/javascript">
+    window.onload=function () {
+        var btn01=document.getElementById("btn01");
+        btn01.onclick=function(){
+            alert(history.length);
+        }
+    };
+};
+</script>
 </html>

@@ -2,9 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>BOM对象</title>
 </head>
 <body>
-$END$
+
+<!--BOM浏览器对象模型-->
+<!--BOM对象-->
+   <!--window代表整个浏览器窗口，网页中的全局对象-->
+   <!--Navigator代表当前浏览器的信息，可以识别不同的浏览器-->
+   <!--现在使用userAgent判断字符串信息-->
+   <!--Location代表当前浏览器的地址栏信息，操作浏览器跳转页面-->
+   <!--History代表浏览器的历史记录，操作浏览器的历史记录，只在当次访问有效-->
+   <!--Screen代表用户屏幕的信息，可以获取到显示器的相关信息-->
+<!--可以通过window使用，也可以直接使用-->
+
+
+    这个是0830页面
 </body>
+<script type="text/javascript">
+    var ua=navigator.userAgent;
+    if(/firefox/i.test(ua)){
+        alert("火狐浏览器");
+    }else if(/chrom/i.test(ua)){
+        alert("google浏览器");
+    }
+
+</script>
 </html>

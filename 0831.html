@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Location事件</title>
+
+</head>
+<body>
+<button id="btn01">
+    点击我去百度
+</button>
+<button id="btn02">
+    重新加载页面
+</button>
+</body>
+<script type="text/javascript">
+    window.onload=function () {
+        var btn01=document.getElementById("btn01");
+        btn01.onclick=function () {
+            location.assign("http://baidu.com.cn");
+        };
+        var btn02=document.getElementById("btn02");
+        btn02.onclick=function () {
+          location.reload(true);
+            //传递true作为参数，则会强制清空缓存刷新页面
+        };
+    };
+
+
+</script>
+</html>
